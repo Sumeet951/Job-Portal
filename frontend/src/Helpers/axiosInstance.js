@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080/api/v1";
+const BASE_URL = "https://job-portal-backend-2ngc.onrender.com/api/v1";
 
 const axiosInstance = axios.create();
 
