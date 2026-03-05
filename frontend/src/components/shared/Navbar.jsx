@@ -8,6 +8,7 @@ import { getAllJobs } from "../../Redux/Slices/JobSlice";
 const Navbar = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const {isLoggedIn} = useSelector((state) => state.auth);
+  console.log(isLoggedIn);
     const user = useSelector((state) => state.auth?.userProfile);
   const dispatch=useDispatch();
   const navigate=useNavigate();
@@ -27,7 +28,7 @@ const Navbar = () => {
   useEffect(() =>{
     fetchUserProfile();
     fetchAlljobs()
-  },[]);
+  },[dispatch]);
 
   return (
     <nav className="w-full bg-white shadow-sm">
