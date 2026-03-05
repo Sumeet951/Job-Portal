@@ -98,6 +98,7 @@ const authSlice=createSlice({
             state.isLoggedIn=true;
             state.role=action?.payload?.data?.user?.role;
             state.data=action?.payload?.data?.user;
+            state.userProfile=action?.payload?.data?.user;
         })
         .addCase(updateProfile.fulfilled,(state,action)=>{
        if(!action?.payload?.data?.user) return;
