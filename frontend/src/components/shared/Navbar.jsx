@@ -27,7 +27,7 @@ const Navbar = () => {
   useEffect(() =>{
     fetchUserProfile();
     fetchAlljobs()
-  },[dispatch]);
+  },[]);
 
   return (
     <nav className="w-full bg-white shadow-sm">
